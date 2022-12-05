@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display:ital@1&display=swap');
+
+:root{
+    --main-color: rgb(1, 7, 1);
+    --silver: #d4a7da;
+    --bg: #fcfbfc;
+    --border: 1rem solid rgba(255, 255, 255, 255);
+}
+
+*{
+    font-family: 'Dancing Script', cursive;
+    /*  */
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 100%;
+    /* overflow: hidden; */
+    scroll-padding-top:9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: whitesmoke;
+    border-radius: 5rem;
+}
+
+body{
+    /* background-image: url(Teji.jpg);
+    background-size: cover; */
+    background: var(--bg);
+}
+
+section{
+    padding: 2rem 7%;
+}
+
+.heading{
+    text-align: center;
+    color: goldenrod;
+    text-transform: uppercase;
+    padding-bottom: 2.5rem;
+    font-size: 3rem;
+}
+
+.heading span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.header .logo img{
+    height: 6rem;
+}
+
+.header .navbar {
+    margin: 0 5rem;
+    font-size: 2rem;
+    color: rgb(107, 47, 82);
+    word-spacing: 20px;
+}
+
+.header .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons a{
+    color: black;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color: var(--main-color);
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .search-form{
+    position: absolute;
+    top: 115%; right: 7%;
+    background: rgb(250, 252, 250);
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+.header .search-form.active{
+    transform: scaleY(1);
+}
+
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: black;
+    padding: 1rem;
+    text-transform: none;
+}
+
+.header .search-form label{
+    cursor: pointer;
+    font-size: 5rem;
+    margin-right: 0rem;
+    color: black;
+}
+
+.header .search-form label:hover{
+    color: var(--main-color);
+}
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(again.jpg) no-repeat;
+    background-size: cover; 
+    background-position: center;
+    /* background-attachment: fixed;
+    scroll-behavior: smooth; */
+}
+
+.home .content{
+    max-width: 50rem; 
+}
+
+.home .content h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: darkmagenta;
+}
+
+.home .content p{
+    font-size: 1rem;
+font-weight: lighter;   
+line-height: 1.8;
+padding: 1rem 0; 
+color: rgba(255, 255, 239, 255);
+}
+
+
+/* .btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 7rem 1rem;
+    font-size: 1rem;
+    color: darkmagenta;
+    background: var(--main-color);
+    cursor: pointer;
+} */
+
+.story .row{
+    display: flex;
+    align-items: center;
+    background: whitesmoke;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+}
+
+.story .row .image{
+    flex: 1 1 40rem;
+}
+
+.story .row .image img{
+   width: 100%;
+}
+
+.story .row .content{
+    flex: 1 1 40rem;
+    padding: 2rem;
+}
+
+.story .row .content h3{
+    font-size: 3rem;
+    color: rgb(45, 5, 44);
+}
+
+.story .row .content p{
+    font-size: 1.6rem;
+    color: black;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.wedding .box-container{
+    display: grid;
+    gap: 1.5rem;
+}
+
+
+.wedding .box-container .box{
+padding: 5rem;    
+text-align: center;
+border: var(--border);
+}
+
+.wedding .box-container .box p{
+    font-size: 30px;
+    color: rgb(5, 43, 5);
+}
+
+.wedding .box-container .box p .Reception-Venue{
+   float: right;
+    }
+
+/* .train .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    border: var(--border);
+} */
+
+.train .image{
+    position: relative;
+    width: 100px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-column: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    border: black ; 
+}
+
+.image__img{
+    display: grid;
+    width: 300px; 
+}
+ 
+.image__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: whitesmoke;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image__overlay--blur{
+    backdrop-filter: blur (5px);
+}
+
+
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+    opacity: 1;
+}
+
+.image__overlay:hover > *{
+    transform: translateY(0px);
+
+
+}
+
+.image__title{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.image__description{
+    font-size: 1.25em;
+    margin-top: 0.25em;
+    
+}
+
+
+.gallery .image{
+    position: relative;
+    width: 100px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-column: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    border: black;
+}
+
+.footer{
+    background: black;
+    text-align: center;
+}
+
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+    text-align: center;
+    border: solid green 10px;
+    font-size: larger;
+}
+
+.footer .links a{
+    padding: 5rem 1rem;
+    color: darkorange;
+    border: var(--border);
+    font-size: 10px;
+}
+
+.footer .links a:hover{
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
+@media (max-width:991px){
+    
+    html{
+        font-size: 70%;    
+    }
+}
+    .header{
+        padding: 1.5rem;
+
+    }
+    section{
+        padding: 2rem 7%;
+        scroll-behavior: smooth;
+    }
+    
+
+    @media (max-width:768px){
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%; right: -100%;
+        background: #d4a7da;
+        background: 25rem;
+        height: calc(100vh-9.5rem);
+    }
+
+    .header .navbar .active{
+        right: 0;
+    }
+
+    .header .navbar a{
+        color: black;
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+    
+    .header.search-form{
+        width: 90%;
+        right: 2rem;
+
+    }
+     .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+     }
+     .home .content h3{
+        font-size: 2.5rem;
+     }
+     .home .content p{
+        font-size: 1.5rem;
+     }
+
+     .train{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+     }
+     
+     .Wedding{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+     }
+}
+
+
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;      
+    }
+
+}
